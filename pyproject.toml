@@ -1,10 +1,10 @@
 [project]
 name = "thingsboard-mcp-server"
 version = "0.1.0"
-description = "Add your description here"
+description = "MCP server for ThingsBoard API"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "httpx>=0.28.1",
-    "mcp[cli]>=1.2.0",
+    "fastmcp>=2.11.2"
 ]

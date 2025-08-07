@@ -1,4 +1,7 @@
-# Thingsboard MCP Server
+# ThingsBoard MCP Server
+
+MCP server for ThingsBoard REST API.
+Actual implemented version of API is `v3.9.1`
 
 ## Setup environment using uv
 
@@ -31,7 +34,8 @@ source .venv/bin/activate
 
 Create .env file: `cp .env.example .env`
 
-Add the environment variables to allow the MCP server to connect to Thingsboard.
+Set the wanted MCP server transport with `MCP_SERVER_TRANSPORT` environment variable. Default: `streamable-http`
+Edit the `THINGSBOARD_*` environment variables to allow the MCP server to connect to ThingsBoard.
 
 
 ## Install dependencies
