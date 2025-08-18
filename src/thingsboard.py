@@ -3550,22 +3550,6 @@ async def delete_entity_attributes(
     return await make_thingsboard_request(endpoint, method="delete", params=params)
 
 
-if __name__ == "__main__":
-    if THINGSBOARD_API_BASE == None:
-        print("Missing THINGSBOARD_API_BASE environment variable")
-        sys.exit(1)
-    if THINGSBOARD_USERNAME == None:
-        print("Missing THINGSBOARD_USERNAME environment variable")
-        sys.exit(1)
-    if THINGSBOARD_PASSWORD == None:
-        print("Missing THINGSBOARD_PASSWORD environment variable")
-        sys.exit(1)
-
-    auth_token = get_auth_token(THINGSBOARD_USERNAME, THINGSBOARD_PASSWORD)
-
-    mcp.run(transport="stdio")
-
-
 @mcp.tool()
 async def get_entities_by_ids(entityType: str, entityIds: str) -> Any:
     """Get Entities by IDs
